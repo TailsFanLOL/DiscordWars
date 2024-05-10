@@ -306,15 +306,13 @@
                 max-width:100%;
                 --margin:0 auto;
                 text-align:center; }
-            /*
-            img {
+            img:not(.logoImgVeryNew) {
                 opacity:0;
                 transform:translateY(100vh)
-                -webkit-animation:tilt-centered-location 8s 96s 1 ease-out forwards; /* Safari 4+ *//*
-                -moz-animation:   tilt-centered-location 8s 96s 1 ease-out forwards; /* Fx 5+ *//*
-                -o-animation:     tilt-centered-location 8s 96s 1 ease-out forwards; /* Opera 12+ *//*
-                animation:        tilt-centered-location 8s 96s 1 ease-out forwards; /* IE 10+, Fx 29+ *//* }
-            */
+                -webkit-animation:tilt-centered-location 8s 96s 1 ease-out forwards; /* Safari 4+ */
+                -moz-animation:   tilt-centered-location 8s 96s 1 ease-out forwards; /* Fx 5+ */
+                -o-animation:     tilt-centered-location 8s 96s 1 ease-out forwards; /* Opera 12+ */
+                animation:        tilt-centered-location 8s 96s 1 ease-out forwards; /* IE 10+, Fx 29+ */ }
             @-webkit-keyframes tilt-centered-location {
                 0% { opacity:1;transform:translateY(100vh); }
                 100% { opacity:inherit;transform:translateY(0) } /* authentic */ }
