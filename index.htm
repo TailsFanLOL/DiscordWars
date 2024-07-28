@@ -323,40 +323,17 @@
             @keyframes tilt-centered-location {
                 0% { opacity:1;transform:translateY(100vh); }
                 100% { opacity:inherit;transform:translateY(0) } /* authentic */ }
+			
 
 
-			@font-face {
-                font-family: "MxPlus IBM VGA 9x16";
-                src: local('MxPlus IBM VGA 9x16'), url("./MxPlus_IBM_VGA_9x16.ttf") format("truetype");
-                font-weight: normal;
-                font-style: normal; 
-                line-gap-override: 0%;
-            }
-            .watermark {
-            	position: absolute;
-            	margin: auto auto auto 2%;
-            	font-smooth: never;
-            	-webkit-font-smoothing: none;
-            	-moz-osx-font-smoothing: none;
-            	animation: sus 6s ease-out 9s 1 forwards;
-            	-webkit-animation: sus 6s ease-out 9s 1 forwards; /* this will prolly never work on browsers that require it anyways */
-            	-moz-animation: sus 6s ease-out 9s 1 forwards;
-            	-o-animation: sus 6s ease-out 9s 1 forwards;
-            	text-align: center;
-            	font-family: "MxPlus IBM VGA 9x16", mono, sans-serif;
-            	font-size: 16px;
-            	color: white;
-            	left: 0px;
-            	right: 0px;
-            	top: 2%;
-            	bottom: 0px;
-            }
-            @keyframes sus {
+
+			
+			@keyframes sus {
             	from {
             		opacity: 1; /* authentic, my ass */
             	}
             	to {
-            		opacity: 0;
+            		opacity: 0; /* I identify as invisible. I was born visible, but now I am trans-parent. My pronounces are who/where. */
             	}
             }
             @-webkit-keyframes sus {
@@ -364,7 +341,7 @@
             		opacity: 1; /* authentic, my ass */
             	}
             	to {
-            		opacity: 0;
+            		opacity: 0; /* I identify as invisible. I was born visible, but now I am trans-parent. My pronounces are who/where. */
             	}
             }
             @-moz-keyframes sus {
@@ -372,7 +349,7 @@
             		opacity: 1; /* authentic, my ass */
             	}
             	to {
-            		opacity: 0;
+            		opacity: 0; /* I identify as invisible. I was born visible, but now I am trans-parent. My pronounces are who/where. */
             	}
             }
             @-o-keyframes sus {
@@ -380,11 +357,23 @@
             		opacity: 1; /* authentic, my ass */
             	}
             	to {
-            		opacity: 0;
+            		opacity: 0; /* I identify as invisible. I was born visible, but now I am trans-parent. My pronounces are who/where. */
             	}
             }
-            button {
-            	background: rgb(0, 0, 0, 0);
+			@font-face {
+                font-family: "MxPlus IBM VGA 9x16";
+                src: 
+                	local('BmPlus IBM VGA 9x16') tech(color-cbdt),
+                	local('MxPlus IBM VGA 9x16') tech(color-cbdt),
+                	url("./BmPlus_IBM_VGA_9x16.otb") format("opentype") tech(color-cbdt), 
+                	url("./MxPlus_IBM_VGA_9x16.ttf") format("truetype") tech(color-cbdt),
+                	local('WebPlus IBM VHA 9x16'),
+                	url("./WebPlus_IBM_VGA_9x16.woff") format("woff2");
+                font-weight: normal;
+                font-style: normal; 
+                line-gap-override: 0%;
+            }
+            .watermark, button, .info {
             	font-smooth: never;
             	-webkit-font-smoothing: none;
             	-moz-osx-font-smoothing: none;
@@ -393,9 +382,42 @@
             	-moz-animation: sus 6s ease-out 9s 1 forwards;
             	-o-animation: sus 6s ease-out 9s 1 forwards;
             	text-align: center;
-            	font-family: "MxPlus IBM VGA 9x16", mono, sans-serif;
+            	text-rendering: optimizeSpeed;
+            	font-family: "MxPlus IBM VGA 9x16", monospace, sans-serif;
             	font-size: 16px;
+            	font-kerning: normal;
+            	line-height-step: 16px; /*blink smth smht*/
+            	line-height: 16px;
+            	letter-spacing: 0px;
+            	color: white;
+            }
+            .watermark {
+            	position: absolute;
+            	margin: auto auto auto auto;
+            	left: 0px;
+            	right: 0px;
+            	top: 16px;
+            	bottom: 0px;
+            }
+            .info {
+            	position: absolute;
+            	margin: auto auto auto auto;
+            	left: 0px;
+            	right: 0px;
+            	top: 32px;
+            	bottom: 0px;
+            }
+           	button {
+            	background: rgb(0, 0, 0, 0);
             	color: blue;
+            	border: 2px white outset;
+            	height: 14px;
+            	display: inline;
+            	vertical-align: top;
+            	padding: 0;
+            }
+            button:active {
+            	border: 1px white inset;
             }
         </style>
     </head>
@@ -456,11 +478,12 @@
             </footer>
         </main>
         <form class="watermark" action="./index.htm" method="get" onanimationend="this.remove()">
-        	You might not have autoplay enabled, so audio might be broken. You can refresh by pressing <button>here</button>. <br/>
-        	<noscript>You probably won't need to refresh any time soon, the president of W3M's fanclub. <br/></noscript>
-        	Btw, I was streaming making this website on <a href="https://discord.gg/piratesoftware/">the president of ferret fanclub's Discord server</a>, and they banned me.<br/>
-        	Please gimme funny dog currency: <a href="dogecoin:DBENj3YknimJWvM8swxpvhUumoJStGUvfa">DBENj3YknimJWvM8swxpvhUumoJStGUvfa</a><br/>
+        	You might not have autoplay enabled, so audio might be broken. You can refresh by pressing <button>here</button>.
+        	<noscript>You probably won't need to refresh any time soon, president of W3M's fanclub.</noscript>
         </form>
-
+        <div class="info">
+        	Btw, I was streaming making this website on <a href="https://discord.com/invite/piratesoftware/">the president of ferret fanclub's Discord server</a>, and they banned me.
+        	Please gimme funny dog currency: <a href="dogecoin:DBENj3YknimJWvM8swxpvhUumoJStGUvfa">DBENj3YknimJWvM8swxpvhUumoJStGUvfa</a>
+		</div>
     </body>
 </html>
